@@ -57,7 +57,7 @@ Functions can be used in ECL:
 Parameters:
 ```
 pin = rpi:RPI_GPIO_P1_11 or rpi:RPI_V2_GPIO_P1_11
-mode = BCM2835_GPIO_FSEL_OUTP
+mode = BCM2835_GPIO_FSEL_OUTP or
 on = rpi:HIGH or rpi:LOW
 millis: a number which type is unsighed-int in ECL
 micros: a number which type is uint64 in ECL
