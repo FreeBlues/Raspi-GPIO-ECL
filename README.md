@@ -12,10 +12,10 @@ At first, you need install ECL or other Common Lisp implemations, in this projec
 
 ##  Install
 
-Get the `raspi-gpio-ecl.lisp` and load it with ECL
+Get the `raspi-gpio.lisp` and load it with ECL
 
 ```
-(load "raspi-gpio-ecl")
+(load "raspi-gpio")
 ```
 
 Then you can use your GPIO with the code:
@@ -44,10 +44,10 @@ https://github.com/raspi-gpio-newlisp
 
 ##  安装
 
-Get the `raspi-gpio-ecl.lisp` and load it with ECL
+Get the `raspi-gpio.lisp` and load it with ECL
 
 ```
-(load "raspi-gpio-ecl")
+(load "raspi-gpio")
 ```
 
 Then you can use your GPIO with the code:
