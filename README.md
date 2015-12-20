@@ -1,14 +1,14 @@
 # Raspi-GPIO-ECL
 
-A Raspberry Pi 2 GPIO library for ECL(Embedded Common Lisp)
+A `Raspberry Pi 2` `GPIO` package for `ECL`(Embedded Common Lisp)
 
 ##  Introduction
 
-This lib provide a way to access Raspberry Pi 2 GPIO with Common Lisp.
+This package provide a way to access `Raspberry Pi 2` `GPIO` with `Common Lisp`, now only few functions, the full version will support later.
 
 ##  Needed 
 
-At first, you need to install ECL(Other Common Lisp implemations will be supported soon). 
+At first, you need to install `ECL`(Other `Common Lisp` implemations will be supported soon). 
 
 Second, copy the `/libfile/libbcm2835.so` to your `/usr/lib` if you have not one in it.
 
@@ -59,11 +59,11 @@ https://gist.github.com/chomy/003deea83b5a13ad1ee3
 
 ##  介绍
 
-这个库提供了一种通过 Common Lisp 访问树莓派2下GPIO的方法, 暂时只导出几个函数用于验证, 后续将补全.
+这个包提供了一种通过 `Common Lisp` 访问 `树莓派2`下 `GPIO` 的方法, 暂时只导出几个函数用于验证, 后续将补全.
 
 ##  依赖需要
 
-首先, 需要在你的树莓派2上安装好 `ECL`, 对于其他 `Common Lisp` 实现的支持将会在后续完成, 在本项目中使用了 [ECL](http://)
+首先, 需要在你的 `树莓派2` 上安装好 `ECL`, 对于其他 `Common Lisp` 实现的支持将会在后续完成.
 
 ##  安装
 
