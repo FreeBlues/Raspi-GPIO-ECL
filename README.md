@@ -1,6 +1,6 @@
 # Raspi-GPIO-ECL
 
-A `Raspberry Pi` `GPIO` package for `ECL`(Embedded Common Lisp)
+A `Raspberry Pi` `GPIO` package for `ECL`(Embedded Common Lisp), wrapped  [Mikem's BCM2835 library](http://www.airspayce.com/mikem/bcm2835)
 
 ##  Introduction
 
@@ -63,6 +63,8 @@ micros: a number which type is uint64 in ECL
 
 ##  Reference
 
+http://www.airspayce.com/mikem/bcm2835
+
 https://github.com/raspi-gpio-newlisp   
 
 https://gist.github.com/chomy/003deea83b5a13ad1ee3
@@ -71,15 +73,16 @@ https://gist.github.com/chomy/003deea83b5a13ad1ee3
 
 # 中文说明
 
-用于树莓派2下GPIO的一个ECL库
+用于`树莓派`下操作`GPIO`的一个`ECL`库, 用`ECL`封装了[Mikem 的 BCM2835 库](http://www.airspayce.com/mikem/bcm2835).
 
 ##  介绍
 
-这个包提供了一种通过 `Common Lisp` 访问 `树莓派2`下 `GPIO` 的方法, 暂时只导出几个函数用于验证, 后续将补全.
+这个包提供了一种通过 `Common Lisp` 访问 `树莓派2`下 `GPIO` 的方法, 可以在 `ECL` 的`REPL`中直接操作`树莓派`的`GPIO`寄存器, 目前只导出少数几个函数用于验证, 后续将补全.
 
 ##  依赖需要
 
-首先, 需要在你的 `树莓派2` 上安装好 `ECL`, 对于其他 `Common Lisp` 实现的支持将会在后续完成.
+- 首先, 需要在你的 `树莓派`(同时支持`V1`和`V2`)上安装好 `ECL`, 目前只支持 `ECL`, 对于其他 `Common Lisp` 实现的支持将会在后续完成.
+- 其次, 需要在你的`树莓派`上安装`BCM2835`库的动态版本(`libbcm2835.so`), 不过鉴于该库体积很小, 所以本项目就把`1.48`版的`libbcm2835.so`集成进去了, 放在 `./libfile/` 目录下, 可以直接使用. 
 
 ##  安装
 
@@ -132,6 +135,8 @@ micros: 数字, ECL 中的无符号64位整型
 
 
 ##  参考
+
+http://www.airspayce.com/mikem/bcm2835
 
 https://github.com/raspi-gpio-newlisp   
 
