@@ -19,7 +19,7 @@ This package provide a way to access `Raspberry Pi 2` `GPIO` with `Common Lisp`,
 git clone https://github.com/FreeBlues/Raspi-GPIO-ECL   
 ``` 
 
-- Run `ECL` script `load-bcm2835.lisp` to load the package (do this:compile `bcm2835.lisp` and get the file `bcm2835.fas`, load "bcm2835.fas")   
+- Run `ECL` script `load-bcm2835.lisp` to load the package.   
 ```
 (load "load-bcm2835.lisp")   
 ```
@@ -29,6 +29,8 @@ git clone https://github.com/FreeBlues/Raspi-GPIO-ECL
 ### Check the version of bcm2835 library
 ```
 (rpi:bcm-version)
+
+10048
 ```
 
 ##  Run examples
@@ -100,6 +102,8 @@ git clone https://github.com/FreeBlues/Raspi-GPIO-ECL
 ### 查看 bcm2835 库的版本信息
 ```
 (rpi:bcm-version)
+
+10048
 ```
 
 ##  运行例程
