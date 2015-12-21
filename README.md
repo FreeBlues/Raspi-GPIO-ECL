@@ -1,6 +1,6 @@
 # Raspi-GPIO-ECL
 
-A `Raspberry Pi 2` `GPIO` package for `ECL`(Embedded Common Lisp)
+A `Raspberry Pi` `GPIO` package for `ECL`(Embedded Common Lisp)
 
 ##  Introduction
 
@@ -19,15 +19,12 @@ Second, copy the `/libfile/libbcm2835.so` to your `/usr/lib` if you have not one
 git clone https://github.com/FreeBlues/Raspi-GPIO-ECL   
 ``` 
 
-- Use `ECL` command `compile-file` to compile `bcm2835.lisp` and get the file `bcm2835.fas`   
+- Use `ECL` script `load-bcm2835.lisp` to load the package (do this:compile `bcm2835.lisp` and get the file `bcm2835.fas`, load "bcm2835.fas")   
 ```
-(compile-file "bcm2835.lisp")   
+(load "load-bcm2835.lisp")   
 ```
-- Use `ECL` command `load` to load  `bcm2835.fas`
+##  Run examples
 
-```
-(load "bcm2835.fas")    
-```
 
 ##  Enjoy it!   
 
