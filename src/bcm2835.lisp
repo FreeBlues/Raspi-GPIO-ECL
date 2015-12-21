@@ -25,7 +25,8 @@ on: HIGH
 
 (defpackage :BCM2835
 (:nicknames :rpi)
-(:use :cl)
+#+ecl (:use :cl)
+#+clisp (:use :cl)
 (:export :bcm-init
   :bcm-version
   :bcm-close
@@ -177,56 +178,64 @@ on: HIGH
 (progn
 (ffi:open-foreign-library "./libfile/libbcm2835.so") 
 
-(ffi:def-call-out init
+(def-call-out bcm-init
 (:name "bcm2835_init")
+(:return-type uint8)
 (:language :stdc)
-(:library "libbcm2835.so"))
+(:library "./libfile/libbcm2835.so"))
 
-(ffi:def-call-out close
+(def-call-out bcm-version
+(:name "bcm2835_version")
+(:return-type uint8)
+(:language :stdc)
+(:library "./libfile/libbcm2835.so"))
+
+(def-call-out bcm-close
 (:name "bcm2835_close")
+(:return-type uint8)
 (:language :stdc)
-(:library "libbcm2835.so"))
+(:library "./libfile/libbcm2835.so"))
 
-(ffi:def-call-out gpio-fsel
+(def-call-out gpio-fsel
 (:name "bcm2835_gpio_fsel")
-(:arguments (pin ffi:uint8) (mode ffi:uint8))
+(:arguments (pin uint8) (mode uint8))
 (:language :stdc)
-(:library "libbcm2835.so"))
+(:library "./libfile/libbcm2835.so"))
 
-(ffi:def-call-out gpio-write
+(def-call-out gpio-write
 (:name "bcm2835_gpio_write")
-(:arguments (pin ffi:uint8) (on ffi:uint8))
+(:arguments (pin uint8) (on uint8))
 (:language :stdc)
-(:library "libbcm2835.so"))
+(:library "./libfile/libbcm2835.so"))
 
-(ffi:def-call-out gpio-lev
+(def-call-out gpio-lev
 (:name "bcm2835_gpio_lev")
-(:return-type ffi:uint8)
-(:arguments (pin ffi:uint8))
+(:return-type uint8)
+(:arguments (pin uint8))
 (:language :stdc)
-(:library "libbcm2835.so"))
+(:library "./libfile/libbcm2835.so"))
 
-(ffi:def-call-out gpio-set
+(def-call-out gpio-set
 (:name "bcm2835_gpio_set")
-(:arguments (pin ffi:uint8))
+(:arguments (pin uint8))
 (:language :stdc)
-(:library "libbcm2835.so"))
+(:library "./libfile/libbcm2835.so"))
 
-(ffi:def-call-out gpio-clr
+(def-call-out gpio-clr
 (:name "bcm2835_gpio_clr")
-(:arguments (pin ffi:uint8))
+(:arguments (pin uint8))
 (:language :stdc)
-(:library "libbcm2835.so"))
+(:library "./libfile/libbcm2835.so"))
 
-(ffi:def-call-out delay
+(def-call-out bcm-delay
 (:name "bcm2835_delay")
-(:arguments (millis ffi:uint))
+(:arguments (millis uint))
 (:language :stdc)
-(:library "libbcm2835.so"))
+(:library "./libfile/libbcm2835.so"))
 
-(ffi:def-call-out delay-microseconds
+(def-call-out bcm-delay-microseconds
 (:name "bcm2835_delayMicroseconds")
-(:arguments (micros ffi:uint64))
+(:arguments (micros uint64))
 (:language :stdc)
-(:library "libbcm2835.so"))
+(:library "./libfile/libbcm2835.so"))
 )
