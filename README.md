@@ -4,7 +4,7 @@ A `Raspberry Pi` `GPIO` package for `ECL`(Embedded Common Lisp), wrapped  [Mikem
 
 ##  Introduction
 
-This package provide a way to access `Raspberry Pi 2` `GPIO` with `Common Lisp`, now only few functions, the full version will support later.
+This package provide a way to access `Raspberry Pi` `GPIO` with `Common Lisp`, now only few functions, the full version will support later.
 
 ##  Needed 
 
