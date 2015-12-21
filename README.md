@@ -8,9 +8,9 @@ This package provide a way to access `Raspberry Pi 2` `GPIO` with `Common Lisp`,
 
 ##  Needed 
 
-At first, you need to install `ECL`(Other `Common Lisp` implemations will be supported soon). 
+- At first, you need to install `ECL`(Other `Common Lisp` implemations will be supported later). 
 
-Second, copy the `/libfile/libbcm2835.so` to your `/usr/lib` if you have not one in it.
+- Second, copy the `/libfile/libbcm2835.so` to your `/usr/lib` if you have not one in it.
 
 ##  Install
 
